@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package user;
+
+
+// Message for user data
+message User_Proto {              
+    string username = 1;           
+    string email = 2;             
+    string password = 3;           
+    string created_at = 4;               
+    string role = 5;             
+}
