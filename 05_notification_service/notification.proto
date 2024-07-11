@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package notification;
+
+message Notification_Proto {
+  int32 user_id = 1;
+  int32 order_id = 2;
+  string message = 3;
+  bool read = 4;
+  string created_at = 5;
+  string updated_at = 6;
+}

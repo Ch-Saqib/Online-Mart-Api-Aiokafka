@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package product;
+
+// Category message representing a product category
+message Category_Proto {
+  string name = 1;  // Name of the category
+  string description = 2;  // Description of the category
+
+  repeated Product_Proto products = 3;  // One-to-many relationship: one category has multiple products
+}
+
+// Product message representing a product
+message Product_Proto {
+  string name = 1;  // Name of the product
+  string description = 2;  // Description of the product, optional
+  float price = 3;  // Price of the product
+  bool available = 4;  // Availability of the product
+  int32 category_id = 5;  // Foreign key to Category
+  string created_at = 6;  // DateTime in ISO 8601 format
+  string updated_at = 7;  // DateTime in ISO 8601 format
+   // RelationShip
+  Category_Proto category = 8;  // One-to-one relationship: product belongs to a category 
+  repeated Review_Proto reviews = 9;  // One-to-many relationship: product has multiple reviews
+  repeated Rating_Proto ratings = 10;  // One-to-many relationship: product has multiple ratings
+}
+
+// Review message representing a product review
+message Review_Proto {
+  string review_text = 1;  // Text of the review
+  int32 product_id = 2;  // Foreign key to Product
+  string created_at = 3;  // DateTime in ISO 8601 format
+   // RelationShip
+  Product_Proto product = 4;  // One-to-one relationship: review belongs to a product
+}
+
+// Rating message representing a product rating
+message Rating_Proto {
+  int32 rating = 1;  // Rating value
+  int32 product_id = 2;  // Foreign key to Product
+  string created_at = 3;  // DateTime in ISO 8601 format
+   // RelationShip
+  Product_Proto product = 4;  // One-to-one relationship: rating belongs to a product
+}

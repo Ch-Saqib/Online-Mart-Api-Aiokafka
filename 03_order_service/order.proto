@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package order;
+
+message Order_Proto {
+  int32 user_id = 1;
+  string order_date = 2; 
+  string status = 3;
+  float total_amount = 4;
+   // RelationShip
+  repeated OrderItem_Proto order_items = 5;
+  Shipment_Proto shipment = 6;
+}
+
+message OrderItem_Proto {
+  int32 order_id = 1;
+  int32 product_id = 2;
+  int32 quantity = 3;
+  float price = 4;
+  float total_price = 5;
+}
+
+message Shipment_Proto {
+  int32 order_id = 1;
+  string shipment_date = 2; 
+  string delivery_date = 3;  
+  string status = 4;
+}
