@@ -83,9 +83,9 @@ services:
     image: postgres:latest
     container_name: postgres_1
     environment:
-      POSTGRES_DB: user_mangement
-      POSTGRES_USER: raptors
-      POSTGRES_PASSWORD: Saqib1122
+      POSTGRES_DB: your_database_name
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
     ports:
       - "5433:5432" # Host port:Container port
     volumes:
@@ -95,9 +95,9 @@ services:
     image: postgres:latest
     container_name: postgres_2
     environment:
-      POSTGRES_DB: product_service
-      POSTGRES_USER: raptors
-      POSTGRES_PASSWORD: Saqib1122
+      POSTGRES_DB: your_database_name
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
     ports:
       - "5434:5432"
     volumes:
@@ -107,9 +107,9 @@ services:
     image: postgres:latest
     container_name: postgres_3
     environment:
-      POSTGRES_DB: order_service
-      POSTGRES_USER: raptors
-      POSTGRES_PASSWORD: Saqib1122
+      POSTGRES_DB: your_database_name
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
     ports:
       - "5435:5432"
     volumes:
@@ -119,9 +119,9 @@ services:
     image: postgres:latest
     container_name: postgres_4
     environment:
-      POSTGRES_DB: inventory_service
-      POSTGRES_USER: raptors
-      POSTGRES_PASSWORD: Saqib1122
+      POSTGRES_DB: your_database_name
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
     ports:
       - "5436:5432"
     volumes:
@@ -131,9 +131,9 @@ services:
     image: postgres:latest
     container_name: postgres_5
     environment:
-      POSTGRES_DB: notification_service
-      POSTGRES_USER: raptors
-      POSTGRES_PASSWORD: Saqib1122
+      POSTGRES_DB: your_database_name
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
     ports:
       - "5437:5432"
     volumes:
@@ -143,9 +143,9 @@ services:
     image: postgres:latest
     container_name: postgres_6
     environment:
-      POSTGRES_DB: payment_service
-      POSTGRES_USER: raptors
-      POSTGRES_PASSWORD: Saqib1122
+      POSTGRES_DB: your_database_name
+      POSTGRES_USER: your_username
+      POSTGRES_PASSWORD: your_password
     ports:
       - "5438:5432"
     volumes:
